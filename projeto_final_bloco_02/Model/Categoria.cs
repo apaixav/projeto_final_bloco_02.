@@ -6,6 +6,15 @@ namespace projeto_final_bloco_02.Model
 {
     public class Categoria
     {
-       
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public long id { get; set; }
+
+        [Column(TypeName = "varchar")]
+        [StringLength(100)]
+        public string tipo { get; set; } = string.Empty;
+
+        [InverseProperty("Categoria")]
+        public virtual ICollection<Produto>? Produto { get; set; }
     }
 }

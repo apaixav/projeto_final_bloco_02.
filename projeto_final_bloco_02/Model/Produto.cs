@@ -25,5 +25,7 @@ namespace projeto_final_bloco_02.Model
         [Column(TypeName = "varchar")]
         [StringLength(1000)]
         public string foto { get; set; } = string.Empty;
+
+        public virtual Categoria? Categoria { get; set; }
     }
 }

@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace projeto_final_bloco_02.Model
 {
-    public class Produto
+    public class Produto : Auditable
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
